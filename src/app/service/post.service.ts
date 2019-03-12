@@ -27,7 +27,20 @@ export class PostService {
     if (index !== -1) {
       this._posts.splice(index, 1);
     }
-    console.log(this._posts);
+  }
+
+  public changeLoveIt(post: Post) {
+    const index: number = this._posts.indexOf(post);
+    if (index !== -1) {
+      this._posts[index].loveIts++;
+    }
+  }
+
+  public changeDontLoveIt(post: Post) {
+    const index: number = this._posts.indexOf(post);
+    if (index !== -1) {
+      this._posts[index].loveIts--;
+    }
   }
 
   get posts(): Post[] {
