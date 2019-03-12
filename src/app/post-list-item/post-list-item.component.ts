@@ -17,12 +17,10 @@ export class PostListItemComponent implements OnInit {
   }
 
   public onLoveIt() {
-    this.post.loveIts++;
     this.postService.changeLoveIt(this.post);
   }
 
   public onDontLoveIt() {
-    this.post.loveIts--;
     this.postService.changeDontLoveIt(this.post);
   }
 
