@@ -18,12 +18,12 @@ export class PostListItemComponent implements OnInit {
 
   public onLoveIt() {
     this.post.loveIts++;
-    this.postService.changeLoveIt(post);
+    this.postService.changeLoveIt(this.post);
   }
 
   public onDontLoveIt() {
     this.post.loveIts--;
-    this.postService.changeDontLoveIt(post);
+    this.postService.changeDontLoveIt(this.post);
   }
 
   public onRemovePost(post: Post) {
