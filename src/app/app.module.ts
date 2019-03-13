@@ -9,6 +9,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { PostListItemComponent } from './post-list-item/post-list-item.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import {RouterModule, Routes} from '@angular/router';
+import {PostService} from './service/post.service';
 
 const appRoutes: Routes = [
   { path: 'new', component: NewPostComponent },
@@ -33,7 +34,9 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
